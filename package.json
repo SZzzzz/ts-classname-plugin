@@ -1,0 +1,22 @@
+{
+  "name": "ts-classname-plugin",
+  "version": "1.0.3",
+  "repository": {
+    "url": "https://github.com/SZzzzz/ts-classname-plugin"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "typescript": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.6"
+  }
+}
