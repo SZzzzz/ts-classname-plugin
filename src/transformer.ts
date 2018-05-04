@@ -9,7 +9,10 @@ const defaultOptions: Options = {
 };
 
 export default function createTransformer(opts?: Options) {
-  const { symbol } = Object.assign({} , defaultOptions, opts);
+  let { symbol } = Object.assign({} , defaultOptions, opts);
+  if (typeof symbol === 'string') {
+    symbol = new RegExp(symbol, 'g');
+  }
 
   const transformer: ts.TransformerFactory<ts.SourceFile> = (ctx) => {
     const { JsxElement, JsxSelfClosingElement, JsxSpreadAttribute, JsxExpression, StringLiteral } = ts.SyntaxKind;
