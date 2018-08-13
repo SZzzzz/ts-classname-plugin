@@ -50,10 +50,6 @@ export default function createTransformer(opts?: Options) {
     return classValue.kind === StringLiteral && flagRegexp.test(classValue.text);
   }
 
-  function getFirstClass() {
-
-  }
-
   function concatTemplate(oldTemplate: ts.TemplateExpression, className: string): ts.TemplateExpression {
     // 重新拼接模板字符串
     const parentHead = oldTemplate.head.text;
@@ -171,5 +167,6 @@ export default function createTransformer(opts?: Options) {
     
     return source => ts.visitEachChild(source, visitor, ctx);
   }
+  
   return transformer;
 }
