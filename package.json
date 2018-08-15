@@ -12,7 +12,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf lib && tsc",
-    "test": "mocha"
+    "test": "mocha",
+    "demo": "node demo/convert.js"
   },
   "dependencies": {
     "chai": "^4.1.2",
