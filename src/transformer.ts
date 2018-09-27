@@ -103,7 +103,7 @@ export default function createTransformer(opts?: Options) {
 
 
   // 构造新值，根据parentValue 有字符串和模板字符串两种形式
-  function​​ createNewClassValue(parentValue: ExpectClassValue, currentClass: string): ExpectClassValue {
+  function createNewClassValue(parentValue: ExpectClassValue, currentClass: string): ExpectClassValue {
     if (parentValue.kind === StringLiteral) {
       const newValueText = currentClass.replace(flagRegexp, parentValue.text.split(' ')[0]);
       return ts.createLiteral(newValueText);

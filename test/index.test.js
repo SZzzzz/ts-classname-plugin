@@ -14,7 +14,7 @@ function transform(sourcePath, transformer = defaultTransformer) {
   const resultCode = printer.printFile(transformedSourceFile);
   return resultCode;
 }
-const casesDir = path.resolve(__dirname, 'case');
+const casesDir = path.resolve(__dirname, 'fixtures');
 const cases = fs.readdirSync(casesDir);
 
 describe('should compile', () => { 
